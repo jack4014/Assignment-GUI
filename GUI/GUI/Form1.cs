@@ -71,13 +71,12 @@ namespace GUI
             }
             return b;
         }
-        private void printAllPrimes(primeList primeL)
-        {
+        private void printAllPrimes(primeList primeL) {
             primeSet pointer = primeL.head;
             while (true)
             {
-                OutputTextBox.Text = OutputTextBox.Text + (pointer.primes[0] + " ," + pointer.primes[1] + " ," + pointer.primes[2] + " ," +
-                        pointer.primes[3] + " ," + pointer.primes[4] + "\n");
+                    OutputTextBox.Text = OutputTextBox.Text+(pointer.primes[0] + " ," + pointer.primes[1] + " ," + pointer.primes[2] + " ," +
+                            pointer.primes[3] + " ," + pointer.primes[4] + "\n");
                 if (pointer.next == null)
                 {
                     break;

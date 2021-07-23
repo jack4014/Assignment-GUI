@@ -29,28 +29,27 @@ namespace GUI
         /// </summary>
         private void InitializeComponent()
         {
-            this.OutputTextBox = new System.Windows.Forms.RichTextBox();
+            this.ResultTextBox = new System.Windows.Forms.RichTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.Number1TextBox = new System.Windows.Forms.TextBox();
             this.Number2TextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // OutputTextBox
+            // ResultTextBox
             // 
-            this.OutputTextBox.Location = new System.Drawing.Point(12, 144);
-            this.OutputTextBox.Name = "OutputTextBox";
-            this.OutputTextBox.Size = new System.Drawing.Size(252, 96);
-            this.OutputTextBox.TabIndex = 0;
-            this.OutputTextBox.Text = "";
-            this.OutputTextBox.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
+            this.ResultTextBox.Location = new System.Drawing.Point(12, 92);
+            this.ResultTextBox.Name = "ResultTextBox";
+            this.ResultTextBox.Size = new System.Drawing.Size(252, 96);
+            this.ResultTextBox.TabIndex = 0;
+            this.ResultTextBox.Text = "";
+            this.ResultTextBox.TextChanged += new System.EventHandler(this.richTextBox1_TextChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 61);
+            this.button1.Location = new System.Drawing.Point(12, 49);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(252, 37);
             this.button1.TabIndex = 1;
@@ -64,6 +63,7 @@ namespace GUI
             this.Number1TextBox.Name = "Number1TextBox";
             this.Number1TextBox.Size = new System.Drawing.Size(100, 20);
             this.Number1TextBox.TabIndex = 2;
+            this.Number1TextBox.TextChanged += new System.EventHandler(this.Number1TextBox_TextChanged);
             // 
             // Number2TextBox
             // 
@@ -80,6 +80,7 @@ namespace GUI
             this.label1.Size = new System.Drawing.Size(53, 13);
             this.label1.TabIndex = 4;
             this.label1.Text = "Number 1";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -92,36 +93,26 @@ namespace GUI
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(12, 246);
+            this.button2.Location = new System.Drawing.Point(11, 194);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(249, 38);
+            this.button2.Size = new System.Drawing.Size(253, 38);
             this.button2.TabIndex = 6;
             this.button2.Text = "Reset";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 128);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(39, 13);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Output";
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(272, 296);
-            this.Controls.Add(this.label3);
+            this.ClientSize = new System.Drawing.Size(272, 243);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.Number2TextBox);
             this.Controls.Add(this.Number1TextBox);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.OutputTextBox);
+            this.Controls.Add(this.ResultTextBox);
             this.Name = "Form1";
             this.Text = "Prime Numbers";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -132,14 +123,13 @@ namespace GUI
 
         #endregion
 
-        private System.Windows.Forms.RichTextBox OutputTextBox;
+        private System.Windows.Forms.RichTextBox ResultTextBox;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox Number1TextBox;
         private System.Windows.Forms.TextBox Number2TextBox;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Label label3;
     }
 }
 
